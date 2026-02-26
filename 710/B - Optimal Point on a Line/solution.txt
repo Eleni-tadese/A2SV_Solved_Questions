@@ -1,1 +1,1 @@
-import mathn = int(input())arr = list(map(int, input().split()))arr.sort() print(arr[math.ceil(n/2) - 1])
+import mathn = int(input())arr = list(map(int, input().split()))arr.sort()print(arr[math.ceil(n/2) - 1])
