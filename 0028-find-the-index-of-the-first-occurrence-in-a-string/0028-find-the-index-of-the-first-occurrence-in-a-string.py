@@ -2,7 +2,7 @@ class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if haystack ==needle:
             return 0
-        for i in range(len(haystack)-len(needle)):
+        for i in range(len(haystack)-len(needle)+1):
             h = i
             n = 0
             while  n<len(needle) and haystack[h] == needle[n]:
@@ -13,4 +13,4 @@ class Solution:
             
         return -1
 
-            
+     
