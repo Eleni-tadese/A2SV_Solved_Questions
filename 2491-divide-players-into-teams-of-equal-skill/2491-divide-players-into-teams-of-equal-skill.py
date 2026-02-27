@@ -1,18 +1,26 @@
 class Solution:
     def dividePlayers(self, skill: List[int]) -> int:
         skill.sort()
-        s=0
-        e=len(skill)-1
+        s1 = 0
+        s2 = len(skill)-1
 
-        intial_sum=skill[s]+skill[e]
-        all_sum=0
+       
+        total=0
+        pair=[]
+
+        while s1<s2:
+            sums=skill[s1] + skill[s2]
+            muls=skill[s1] * skill[s2]
+            total+=muls
+            pair.append(sums)
         
-        while s<e:
-            if skill[s]+skill[e] == intial_sum:
-              all_sum+=skill[s]*skill[e]
-              
-            else:
-                return -1
-            s+=1
-            e-=1
-        return all_sum
+            s1+=1
+            s2-=1
+
+        if len(set(pair))==1:
+            return total
+        else:
+            return -1
+
+
+        
