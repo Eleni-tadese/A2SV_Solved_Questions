@@ -1,8 +1,7 @@
 class Solution:
     def largestPerimeter(self, nums: List[int]) -> int:
 
-        # Triangle Inequality Theorem.
-        # Perimeter = a + b + c, largest we need so we need to sort
+       
         nums.sort()
         
         for i in range(len(nums)-1,1,-1):
