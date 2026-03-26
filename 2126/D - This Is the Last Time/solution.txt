@@ -1,1 +1,0 @@
-t=int(input())all=[]for _ in range(t):    n,k = map(int,input().split())    all = []    for i in range(n):         r = list(map(int, input().split()))        all.append(r)    all.sort()    for j in range(n):        if all[j][2]>k  and  all[j][0]<= k <=all[j][1]:            k=all[j][2]    print(k)
