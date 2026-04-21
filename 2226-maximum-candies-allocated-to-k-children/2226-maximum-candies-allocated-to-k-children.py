@@ -6,10 +6,8 @@ class Solution:
         ans = 0
         while low <= high:
             mid = (low + high) // 2
-
             total_children = 0
             for c in candies:
-
                 total_children += c // mid
 
             if total_children >= k:
