@@ -1,21 +1,15 @@
-class Solution(object):
-    def findDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        store={}
-        ans=[]
-        # for i in range(len(nums)):
-        #     count = nums.count(nums[i])
-        #     store[nums[i]]=count
-        for num in nums:
-            # Update the count in the dictionary manually
-            store[num] = store.get(num, 0) + 1
+class Solution:
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        result = []
         
-        for  key, value in store.items():
-            if value ==2:
-                ans.append(key)
-        return(ans)
-
-        
+        for x in nums:
+            val = abs(x)
+            index = val - 1
+            
+         
+            if nums[index] < 0:
+                result.append(val)
+            else:
+                nums[index] = -nums[index]
+                
+        return result
